@@ -188,6 +188,15 @@ Rules of XB
                      </div>
                   </div>
 
+* Content should be read from the Crafter repository using an API that immediately responds with 
+  changes made to the repository.
+
+  * XB will cause modified content to be re-fetched from the repository.  Therefore, it is important 
+    that the content be present and available at the endpoint when it is fetched.  In particular, 
+    displaying content in a JavaScript app that is read from Crafter Search will not be immediately 
+    available for re-loading, because the search engine is updated asynchronously a few seconds after 
+    content is saved. 
+
 .. _xb-freemarker:
 
 ^^^^^^^^^^
